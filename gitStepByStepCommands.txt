@@ -117,6 +117,34 @@ Pull:
 
 For cloning only a single branch: But then u have to create a new folder.
 git clone --single-branch --branch mynewbranch https://github.com/sulakshanadeore/Project1.git
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Fetch:
+Fetch all the changes from remote repo to local repo.
+It doesn't make changes to the current working dir, it stores all changes in a separate branch called remote-tracking branch.
+git merge or git rebase command to merge these changes i
+nto current working directory.
+What fetch does:
+1) downloads updates from the remote repo
+2) keeps current dir unchanged
+3) updates only remote tracking branches
+4) Allows you to see what others have committed before merging it to your local repo
+
+1) confirm that everything is stable first, ie both are in sync
+then fetch, after updating the remote dir
+git fetch 
+
+git merge origin/main
+
+git log
+
+
+Pull: command is used to fetch all changes from remote repo to the current working directory and it merges the changes automatically in the current
+dir
+git pull=git fetch + git merge
+
+
 
 
 
