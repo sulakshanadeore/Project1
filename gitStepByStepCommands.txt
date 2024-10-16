@@ -106,6 +106,19 @@ git rev-parse thirdBranch
 3ef28bace7ad0d614fb54213bebb01ad590470da
 
 IF BOTH THE SHA codes are same, then they are merged fully.
+------------------------------------------------------------------------------------------------------------------------------
+For Cloning entire project:
+create a folder, go inside the folder and then issue clone command in the folder.
+git clone https://github.com/sulakshanadeore/Project1.git
+
+Fetch:
+Pull:
+
+
+For cloning only a single branch: But then u have to create a new folder.
+git clone --single-branch --branch mynewbranch https://github.com/sulakshanadeore/Project1.git
+
+
 
 
 
