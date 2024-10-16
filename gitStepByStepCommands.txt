@@ -89,5 +89,23 @@ Step 7: If you want to merge to the master, any of the branches, checkout to mas
 git merge thirdBranch(The name of the branch) that you want to merge with master.
 
 
+Step 8: For Rebase:
+
+Step1 :Do git merge command for adding the new file to master branch
+git merge master thirdBranch
+
+Step 2: git commit -m "Merged"
+
+Step 3: git push
+
+Now, check rebase :
+git merge-base master thirdBranch
+3ef28bace7ad0d614fb54213bebb01ad590470da
+
+git rev-parse thirdBranch
+3ef28bace7ad0d614fb54213bebb01ad590470da
+
+IF BOTH THE SHA codes are same, then they are merged fully.
+
 
 
