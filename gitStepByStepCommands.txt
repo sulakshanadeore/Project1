@@ -1,0 +1,93 @@
+What is GIT?
+GitHub/git/GitLab etc
+
+Version Control
+
+Continuous Integration /Continuous Development===>Agile
+Developer + Operations
+
+Sprint---> Teams
+A short period of 10 to15 days planned for working on a feature.
+Stand up---> 15 mins
+
+Scrum Master: 
+Developers:
+Testing:
+Business Analyst:
+
+
+1) create
+2) add files----> testing
+3) commit files
+4) create branch
+5) merge branch
+
+
+Step 1: Create a local git repository 
+mkdir project1
+cd project1
+git init
+
+Step 2: Add a new file/empty file to the repo
+echo "content " firstfile.txt
+
+Once you've added or modified files in a folder containing a git repo, git will notice that  the file exists inside the repo. But, git won't track the file unless you explicitly tell it to. Git only saves/manages changes to files that it tracks, so we’ll need to send a command to confirm that yes, we want git to track our new file.
+
+After creating the new file, you can use the git status command to see which files git knows that they exist.
+
+git status
+
+
+A commit is a record of what changes you have made since the last time you made a commit. Essentially, you make changes to your repo (for example, adding a file or modifying one) and then tell git to put those changes into a commit.
+
+Commits make up the essence of your project and allow you to jump to the state of a project at any other commit.
+
+So, how do you tell git which files to put into a commit? This is where the staging environment or index come in. As seen in Step 2, when you make changes to your repo, git notices that a file has changed but won't do anything with it (like adding it in a commit).
+
+To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the git add <filename> command (see Step 3 below).
+
+Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command. 
+
+Note: The staging environment, also called 'staging', is the new preferred term for this, but you can also see it referred to as the 'index'.
+
+Step 3: Add a file to the staging environment
+Add a file to the staging environment using the git add command. 
+
+Step 4: Create a Commit
+git commit -m "Your message about the commit"
+
+Step 5: Create a new branch
+
+Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
+
+Branches allow you to move back and forth between 'states' of a project. Official git docs describe branches this way: ‘A branch in Git is simply a lightweight movable pointer to one of these commits.’ For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you're done with the page, you can merge your changes from your branch into the primary branch. When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files. 
+
+Let's say you are on the primary branch and want to create a new branch to develop your web page. Here's what you'll do: Run git checkout -b <my branch name>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the primary branch.
+
+After running the above command, you can use the git branch command to confirm that your branch was created:
+
+git branch
+
+The branch name with the asterisk next to it indicates which branch you're on at that given time. 
+
+****Create a repo on GitHub and then type the following command,
+git remote add origin https://github.com/sulakshanadeore/Project1.git
+git branch -M master 
+git push -u origin master
+
+For each branch, checkout to the branch and push the files of the branch.
+git push --set-upstream origin thirdBranch
+
+Step 6: Add file to a branch just created and commit it and push. Check where are u creating the file(by git status)
+
+Create file, if name of file is secondFile.txt
+git add secondFile.txt
+git commit  -m "new file added"
+git push
+
+Step 7: If you want to merge to the master, any of the branches, checkout to master  and give merge command:
+git merge thirdBranch(The name of the branch) that you want to merge with master.
+
+
+
+
